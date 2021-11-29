@@ -1,5 +1,5 @@
 /*===== GOOGLE FONTS =====*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
 
 /*===== VARIABLES CSS =====*/
 :root {
@@ -14,7 +14,7 @@
   --body-color: #FCFCFC;
 
   /*========== Font and typography ==========*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: 'Rubik', sans-serif;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
@@ -171,12 +171,20 @@ body.scale-cv {
   gap: .25rem;
 }
 
-.scale-cv .skills__name {
+.scale-cv .lang__name {
   margin-bottom: var(--mb-1);
 }
 
 .scale-cv .interests__container {
   column-gap: 2.5rem;
+}
+
+.scale-cv .interests {
+  padding-bottom: 5.5rem;
+}
+
+.scale-cv .lang__name {
+  font-size: 0.875rem;
 }
 
 body {
@@ -278,6 +286,10 @@ img {
 .nav__toggle {
   color: var(--title-color);
   font-weight: var(--font-medium)
+}
+
+.content__link {
+  color: var(--text-color);
 }
 
 .nav__toggle {
@@ -462,25 +474,25 @@ img {
 }
 
 /*========== SKILLS AND LANGUAGES ==========*/
-.skills__content,
-.languages__content {
+.lang__content,
+.technologies__content {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.skills__content,
-.languages__content {
+.lang__content,
+.technologies__content {
   gap: 0;
 }
 
-.skills__name,
-.languages__name {
+.lang__name,
+.technologies__name {
   display: flex;
   align-items: center;
   margin-bottom: var(--mb-3);
 }
 
-.skills__circle,
-.languages__circle {
+.lang__circle,
+.technologies__circle {
   display: inline-block;
   width: 5px;
   height: 5px;
@@ -494,28 +506,21 @@ img {
   margin-bottom: var(--mb-1);
 }
 
-/*========== REFERENCES ==========*/
-.references__content {
-  gap: .25rem;
-}
-
-.references__subtitle {
-  color: var(--text-color-light);
-}
-
-.references__subtitle,
-.references__contact {
-  font-size: var(--smaller-font-size);
-}
-
-.references__title {
-  font-size: var(--h3-font-size);
-}
-
 /*========== INTERESTS ==========*/
+.interests {
+  padding-bottom: 4rem;
+}
+
 .interests__container {
   grid-template-columns: repeat(3, 1fr);
   margin-top: var(--mb-2);
+}
+
+.interests__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-color);
 }
 
 .interests__content {
@@ -616,16 +621,14 @@ img {
     display: none;
   }
 
-  .references__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
-  .languages__content {
+
+  .technologies__content {
     grid-template-columns: repeat(3, max-content);
     column-gap: 3.5rem;
   }
 
-  .scale-cv .languages__content {
+  .scale-cv .technologies__content {
     column-gap: 2rem;
   }
 
